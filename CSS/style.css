@@ -1,0 +1,64 @@
+/* Selector {
+    Property: value;
+} */
+
+* {
+	text-align: right;
+}
+
+body {
+	background-image: url('https://images.unsplash.com/photo-1612522677838-2338b1b0b65d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80');
+	background-size: cover;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+h2,
+p {
+	color: rgb(128, 50, 21);
+	text-align: center;
+	border: 5px dashed #d4876a;
+	cursor: pointer;
+}
+
+p {
+	/* text-decoration: underline; */
+	/* text-transform: uppercase; */
+	line-height: 5px;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 30px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+img {
+	float: left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+.web-text:last-child {
+	border: 5px solid green;
+}
+
+.web-text:first-child {
+	border: 5px solid red;
+}
+
+.active {
+	color: #fff;
+}
+
+#div1 {
+	background-color: rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+	background-color: rgba(0, 255, 0, 0.2);
+}

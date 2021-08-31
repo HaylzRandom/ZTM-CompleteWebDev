@@ -1,0 +1,28 @@
+h2 {
+	color: blue;
+}
+
+.box-model {
+	border: 5px solid red;
+	display: inline-block;
+	/* padding: 5px 20px 5px 20px;
+    margin: 0 20px 0 20px; */
+	padding: 5px 20px;
+	margin: 0 20px;
+	width: 33px;
+	height: 55px;
+}
+
+p {
+	font-size: 20px;
+}
+
+/* Font size 2 times containing element */
+/* span {
+    font-size: 2em;
+} */
+
+/* Font size 2 times of root element */
+span {
+	font-size: 2rem;
+}
