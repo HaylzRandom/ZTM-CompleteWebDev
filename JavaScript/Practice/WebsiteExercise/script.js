@@ -1,46 +1,46 @@
-// 4 + 3;
-// if (4 + 3 === 7) {
-// 	console.log('Wow you so smart!');
-// }
+4 + 3;
+if (4 + 3 === 7) {
+	console.log('Wow you so smart!');
+}
 
 // Functions
 
 // Function Declaration
-// function sayHello() {
-// 	console.log('Hello World');
-// }
+function sayHello() {
+	console.log('Hello World');
+}
 
-// sayHello();
+sayHello();
 
 // // Function Expression - Anonymous Function
 
-// var sayBye = function () {
-// 	console.log('Bye');
-// };
+var sayBye = function () {
+	console.log('Bye');
+};
 
-// sayBye();
+sayBye();
 
-// function sing(song) {
-// 	console.log(song);
-// }
+function sing(song) {
+	console.log(song);
+}
 
-// sing('Ladeda');
-// sing('Hello');
-// sing("I'm a little teapot");
+sing('Ladeda');
+sing('Hello');
+sing("I'm a little teapot");
 
 // function multiply(a, b) {
-// 	if (a > 10 || b > 10) {
-// 		return 'That is too hard!';
-// 	} else {
-// 		return a * b;
-// 	}
-// }
+	if (a > 10 || b > 10) {
+		return 'That is too hard!';
+	} else {
+		return a * b;
+	}
+}
 
-// alert(multiply(5, 40));
+alert(multiply(5, 40));
 
 // Arrays
 
-/* var arr = ['cat', 'dog', 'mouse', 'fish'];
+var arr = ['cat', 'dog', 'mouse', 'fish'];
 
 console.log(arr[0]);
 
@@ -64,11 +64,11 @@ console.log(arr);
 var arr1 = [1, 2, 3];
 var arr2 = [3, 4, 5];
 
-console.log(arr1.concat(arr2)); */
+console.log(arr1.concat(arr2));
 
 // Objects
 
-/* var user = {
+var user = {
 	name: 'Hayley',
 	age: '31',
 	hobby: 'Video Games',
@@ -107,13 +107,13 @@ var list = [
 ];
 
 console.log(list);
-console.log(list[0].password); */
+console.log(list[0].password);
 
 // Loops
 
 // For Loop
 
-/* var todos = ['clean room', 'brush teeth', 'exercise', 'study', 'sleep'];
+var todos = ['clean room', 'brush teeth', 'exercise', 'study', 'sleep'];
 
 console.log(todos);
 
@@ -123,24 +123,24 @@ for (let i = 0; i < todosLength; i++) {
 	todos.pop();
 }
 
-console.log(todos); */
+console.log(todos);
 
 // While loop
 
-/* var counterOne = 10;
+var counterOne = 10;
 
 while (counterOne > 0) {
 	counterOne--;
-} */
+}
 
 // Do While Loop
 
-/* var counterTwo = 10;
+var counterTwo = 10;
 
 do {
 	console.log(counterTwo);
 	counterTwo--;
-} while (counterTwo > 0); */
+} while (counterTwo > 0);
 
 // forEach Loop
 
