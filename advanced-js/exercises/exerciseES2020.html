@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise ES2020</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise ES2020</h1>
+		<div class="exercise-container">
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: What do you think the MIN_SAFE_INTEGER is?</h4>
+				<div class="answer">
+					<pre>
+	<code>
+console.log(Number.MAX_SAFE_INTEGER)
+console.log(Number.MIN_SAFE_INTEGER)
+</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+                        <ul>
+                            <li>MAX_SAFE_INTEGER - 9007199254740991</li>
+                            <li>MIN_SAFE_INTEGER - -9007199254740991</li>
+                        </ul>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: Why does this throw an error? How can you fix it?</h4>
+				<div class="answer">
+                    <code>3 + 4 + 1n</code>
+					<p>
+						<strong>Answer:</strong> Cannot convert BigInt to Number<br>
+                        <code>3n + 4n + 1n; // 8n</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3: Clean up this code using optional chaining</h4>
+				<div class="answer">
+					<pre>
+				<code>
+let will_pokemon = {
+    pikachu: {
+        species: 'Mouse Pokemon',
+        height: 0.4,
+        weight: 6,
+        power: 'lightning',
+        friend: { 
+            charizard: {
+                species: 'Dragon Pokemon',
+                height: 1.7,
+                weight: 90.5,
+                power: 'fire'
+            }
+        }
+    }
+}
+
+let andrei_pokemon = {
+    raichu: {
+        species: 'Mouse Pokemon',
+        height: 0.8,
+        weight: 30,
+        power: ''
+    }
+}
+
+if (andrei_pokemon && andrei_pokemon.raichu && will_pokemon 
+    && will_pokemon.pikachu && will_pokemon.pikachu.friend 
+    && will_pokemon.pikachu.friend.charizard) {
+        console.log('fight!')
+    } else {
+        console.log('walk away...')
+    }
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+                        <pre>
+                            <code>
+if (andrei_pokemon?.raichu && will_pokemon?.pikachu?.friend?.charizard) {
+	console.log('fight!');
+} else {
+	console.log('walk away...');
+}
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question4">
+				<h4 class="question-heading">Q4: What do these each output?</h4>
+				<div class="answer">
+					<pre>
+				<code>
+console.log(false ?? 'hellooo')
+console.log(null ?? 'hellooo')
+console.log(null || 'hellooo')
+console.log((false || null) ?? 'hellooo')
+console.log(null ?? (false || 'hellooo'))
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong>
+                        <pre>
+                            <code>
+console.log(false ?? 'hellooo'); // false
+console.log(null ?? 'hellooo'); // 'hellooo'
+console.log(null || 'hellooo'); // 'hellooo'
+console.log((false || null) ?? 'hellooo'); // 'hellooo'
+console.log(null ?? (false || 'hellooo')); // 'hellooo'
+                            </code>
+                        </pre>
+
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

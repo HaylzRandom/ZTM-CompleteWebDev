@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise 1</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise 1</h1>
+		<div class="exercise-container">
+			<h3>
+				Question: For all of these, what is the value of <em>a</em> when the
+				function gets called with the <code>alert()</code>
+			</h3>
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1</h4>
+				<div class="answer">
+					<pre>
+	<code>
+function q1() {
+ <br />
+ var a = 5;
+ <br />
+ if (a > 1) {
+     a = 3;
+ }
+     alert(a);
+}
+</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> The value shown will be <strong>3</strong>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2</h4>
+				<div class="answer">
+					<pre>
+				<code>
+var a = 0;
+<br>
+function q2() {
+  a = 5;
+}
+
+function q22() {
+  alert(a);
+}
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> The value shown will be <strong>5</strong>.
+						First run function <strong>q2</strong> before <strong>q22</strong>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3</h4>
+				<div class="answer">
+					<pre>
+				<code>
+function q3() {
+  window.a = 'hello';
+}
+
+function q32() {
+  alert(a);
+}
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> Running q3 first and then q32 will display
+						<strong>'hello'</strong>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question4">
+				<h4 class="question-heading">Q4</h4>
+				<div class="answer">
+					<pre>
+				<code>
+var a = 2;
+if (true) {
+  var a = 5;
+  alert(a);
+}
+alert(a);
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> <strong><code>alert(a)</code></strong> will
+						be <strong>5</strong>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

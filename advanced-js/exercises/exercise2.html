@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise 2</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise 2</h1>
+		<div class="exercise-container">
+			<div class="question question1 active">
+				<h4 class="question-heading">
+					Q1: Change this function into a ternary and assign it to variable
+					called <code>experiencePoints</code>
+				</h4>
+				<div class="answer">
+	<pre>
+	<code>
+function experiencePoints() {
+    if (winBattle()) {
+        return 10;
+    } else {
+        return 1;
+    } 
+}
+</code>
+</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+<pre>
+<code>
+function experiencePoints() {
+    winBattle() ? 10 : 1;
+}
+</code>
+</pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<h3>Using this function, answer the questions below:</h3>
+			<div class="question-function">
+				<pre>
+                    <code>
+    function moveCommand(direction) {
+	var whatHappens;
+	switch (direction) {
+		case 'forward':
+			break;
+			whatHappens = 'you encounter a monster';
+		case 'back':
+			whatHappens = 'you arrived home';
+			break;
+			break;
+		case 'right':
+			return (whatHappens = 'you found a river');
+			break;
+		case 'left':
+			break;
+			whatHappens = 'you run into a troll';
+			break;
+		default:
+			whatHappens = 'please enter a valid direction';
+	}
+	return whatHappens;
+    }
+                    </code>
+                </pre>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">
+					Q2: Return value when <code>moveCommand("forward")</code>
+				</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> <code>('you encounter a monster');</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">
+					Q3: Return value when <code>moveCommand("back")</code>
+				</h4>
+				<div class="answer">
+					<p><strong>Answer:</strong> <code>('you arrive home')</code></p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">
+					Q4: Return value when <code>moveCommand("right")</code>
+				</h4>
+				<div class="answer">
+					<p><strong>Answer:</strong> <code>('you found a river')</code></p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">
+					Q5: Return value when <code>moveCommand("left")</code>
+				</h4>
+				<div class="answer">
+					<p><strong>Answer:</strong> <code style="color: red;">undefined</code></p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

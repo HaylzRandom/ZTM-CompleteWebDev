@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise ES7</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise ES7</h1>
+		<div class="exercise-container">
+			<h3>
+				Question: Solve the below problems</code>
+			</h3>
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: Check if this array includes the name "John"</h4>
+				<div class="answer">
+					<code>const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];</code>
+
+					<p>
+						<strong>Answer:</strong> <code>dragons.includes('John'); <strong>// Returns false</strong></code> 
+
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: Check if this array includes any name that has "John" inside of it. If it does, return that
+// name or names in an array.</h4>
+				<div class="answer">
+                    <code>const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];</code>
+					<p>
+						<strong>Answer:</strong> <code>dragons.filter((name) => name.includes('John')); <strong>// Returns 'Johnathan'</strong></code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3: Create a function that calculates the power of 100 of a number entered as a parameter</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> <code>const power100 = (number) => number ** 100;</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question4">
+				<h4 class="question-heading">Q4: Using your function from #3, put in the parameter 10000. What is the result?</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> <code>power100(10000); <strong>// Infinity</strong></code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

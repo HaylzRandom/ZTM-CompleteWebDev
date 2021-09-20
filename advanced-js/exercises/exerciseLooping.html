@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Looping Exercise</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Looping Exercise</h1>
+		<div class="exercise-container">
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: Create a function called <code>biggestNumberInArray()</code> that takes and array as a parameter and returns the biggest number. Use at least 3 different types of loops.</h4>
+				<div class="answer">
+					<pre>
+	<code>
+const array = [-1,0,3,100, 99, 2, 99] // should return 100
+const array2 = ['a', 3, 4, 2] // should return 4
+const array3 = [] // should return 0
+</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong>
+						<pre>
+							<code>
+function biggestNumberInArray(arr) {
+	let highestNum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (highestNum < arr[i]) {
+			highestNum = arr[i];
+		}
+	}
+	return highestNum;
+}
+
+function biggestNumberInArray2(arr) {
+	let highestNum = 0;
+	arr.forEach((number) => {
+		if (highestNum < number) {
+			highestNum = number;
+		}
+	});
+	return highestNum;
+}
+
+function biggestNumberInArray3(arr) {
+	let highestNum = 0;
+	for (number of arr) {
+		if (highestNum < number) {
+			highestNum = number;
+		}
+	}
+
+	return highestNum;
+}
+							</code>
+						</pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: Write a function <code>checkBasket()</code> that lets you know if the item is in the basket or not</h4>
+				<div class="answer">
+					<pre>
+				<code>
+amazonBasket = {
+  glasses: 1,
+  books: 2,
+  floss: 100
+}
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+						<pre>
+							<code>
+function checkBasket(basket, lookingFor) {
+	for (item in basket) {
+		if (item === lookingFor) {
+			return `Item ${lookingFor} has been found!`;
+		}
+	}
+	return `Sorry ${lookingFor} isn't in your basket :(`;
+}
+							</code>
+						</pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

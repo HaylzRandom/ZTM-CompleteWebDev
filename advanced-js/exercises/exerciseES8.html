@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise ES8</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise ES8</h1>
+		<div class="exercise-container">
+			<h3>
+				Question: Solve the below problems
+			</h3>
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: Line up the Turtle and the Rabbit at the start line:</h4>
+				<div class="answer">
+					<pre>
+	<code>
+const startLine = '     ||<- Start line';
+let turtle = '🐢';
+let rabbit = '🐇';
+
+// it should look like this:
+'     ||<- Start line'
+'       🐢'
+'       🐇'
+
+// when you do:
+console.log(startLine);
+console.log(turtle);
+console.log(rabbit);
+</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+                        <pre>
+                            <code>
+turtle = turtle.padStart(8);
+rabbit = rabbit.padStart(8);
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: What happens when you run <code>turtle.trim().padEnd(9, '=')</code> on the turtle variable</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> "🐢======="
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3: Get the below object to go from:</h4>
+				<div class="answer">
+					<pre>
+				<code>
+let obj = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
+}
+// to this:
+'my name is Rudolf the raindeer'
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+                        <pre>
+                            <code>
+Object.entries(obj)
+	.map((value) => value.join(' '))
+	.join(' ');
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

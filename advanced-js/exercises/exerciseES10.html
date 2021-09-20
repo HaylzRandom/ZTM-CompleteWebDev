@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise ES10</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise ES10</h1>
+		<div class="exercise-container">
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: Turn this array into a new array: [1,2,3,[4],[5]]. Bonus if you can do it on one line</h4>
+				<div class="answer">
+					<code>const array = [[1],[2],[3],[[[4]]],[[[5]]]]</code>
+					<p>
+						<strong>Answer:</strong> <code>console.log(array.flat(2));</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: Turn this array into a new array: [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong>
+                        <pre>
+                            <code>
+const greeting = [
+	['Hello', 'young', 'grasshopper!'],
+	['you', 'are'],
+	['learning', 'fast!'],
+];
+
+console.log(greeting.flatMap((greet) => greet.join(' ')));
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3: Turn the greeting array above into a string: 'Hello young grasshopper you are learning fast!'</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong><br>
+                        <code>console.log(greeting.flatMap((greet) => greet.join(' ')).join(' '));</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question4">
+				<h4 class="question-heading">Q4: Turn the trapped 3 number into: [3]</h4>
+				<div class="answer">
+					<code>const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]];</code>
+					<p>
+						<strong>Answer:</strong> <code>console.log(trapped.flat(Infinity));</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question5">
+				<h4 class="question-heading">Q5: Clean up this email to have no whitespaces. Make the answer be in a single line (return a new string</h4>
+				<div class="answer">
+					<code>const userEmail3 = '     cannotfillemailformcorrectly@gmail.com   '</code>
+					<p>
+						<strong>Answer:</strong> <code>console.log(userEmail3.trimStart().trimEnd());</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question6">
+				<h4 class="question-heading">Q6: Turn the below users (value is their ID number) into an array: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]</h4>
+				<div class="answer">
+					<code></code>
+					<p>
+						<strong>Answer:</strong> 
+                        <pre>
+                            <code>
+const users = { user1: 18273, user2: 92833, user3: 90315 }
+const usersArray = Object.entries(users);
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+            <div class="question question7">
+				<h4 class="question-heading">Q7: Change the output array of the above to have the user's IDs multiplied by 2 -- Should output:[ [ 'user1', 36546 ], [ 'user2', 185666 ], [ 'user3', 180630 ] ]</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> <code>const updatedUsersArray = usersArray.map((user) => [user[0], user[1] * 2]);</code>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+            <div class="question question8">
+				<h4 class="question-heading">Q8: Change the output array of question #7 back into an object with all the users IDs updated to their new version. Should output: { user1: 36546, user2: 185666, user3: 180630 }</h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong> 
+                        <pre>
+                            <code>
+const updatedUsers = Object.fromEntries(updatedUsersArray);
+console.log(updatedUsers);
+                            </code>
+                        </pre>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

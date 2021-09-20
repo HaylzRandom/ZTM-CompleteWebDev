@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise 6</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Advanced JavaScript Exercises - Exercise 6</h1>
+		<div class="exercise-container">
+			<div class="question question1 active">
+				<h4 class="question-heading">Q1: Evaluate these:</h4>
+				<div class="answer">
+					<pre>
+	<code>
+[2] === [2] 
+{} === {} 
+</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> Both are <strong>false</strong>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question2">
+				<h4 class="question-heading">Q2: What is the value of property a for each object.</h4>
+				<div class="answer">
+					<pre>
+				<code>
+const object1 = { a: 5 }; 
+const object2 = object1; 
+const object3 = object2; 
+const object4 = { a: 5}; 
+object1.a = 4;
+				</code>
+				</pre>
+
+					<p>
+						<strong>Answer:</strong> 
+                        <ul>
+                            <li>object1 = 4</li>
+                            <li>object2 = 4</li>
+                            <li>object3 = 4</li>
+                            <li>object4 = 5</li>
+                        </ul>
+					</p>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="question question3">
+				<h4 class="question-heading">Q3: Create two classes: an Animal class and a Mammal class. Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. </h4>
+				<div class="answer">
+					<p>
+						<strong>Answer:</strong><br>
+                        <pre>
+                            <code>
+class Animal {
+    constructor(name, type, color) {
+        this.name = name;
+        this.type = type;
+        this.color = color;
+    }
+}
+
+class Mammal extends Animal {
+    constructor(name, type, color) {
+        super(name, type, color)
+    }
+    sound() {
+        console.log(`Mooo! My name is ${this.name} 
+        and I am a ${this.type} and my colourisation 
+        is ${this.color}`)
+    }
+}
+
+const cow = new Mammal('Clarabell', 'cow', 'white');
+console.log(cow);
+cow.sound();
+                            </code>
+                        </pre>
+				</div>
+				<button class="question-toggle">
+					<i class="fas fa-chevron-down"></i>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
